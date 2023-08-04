@@ -1,0 +1,159 @@
+/* 
+colors used 
+*/
+.profile {
+  max-width: 700px;
+  margin: 0 auto;
+}
+* {
+ box-sizing: border-box;
+}
+button:hover{
+  background-color: undefined;
+  cursor: pointer;
+  opacity: 0.8;
+}
+button:focus{
+  background-color: undefined;
+  cursor: pointer;
+  opacity: 0.8;
+}
+.button:hover{
+  background-color: undefined;
+  cursor: pointer;
+  opacity: 0.8;
+}
+#selfportrait { 
+  float: left;
+  width: 250px;
+  margin-right: 40px;
+  border-radius: 50%;
+}
+#logo{
+  width: 100px;
+  height: 100px;
+  float: left;
+}
+body {
+    background-color: white;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+}
+h1 {
+    font-size: 40px;
+    font-weight: bold;
+}
+p {
+    font-size: 20px;
+}
+.page-header {
+  display: flex;
+  width: auto;
+  padding: 20px;
+}
+.page-header__item {
+  flex: 0 1 200px;
+}
+.page-header__item:last-child {
+  flex-grow: 1;
+  text-align: right;
+}
+.navigation-list {
+  list-style-type: none;
+}
+.navigation-list li {
+  display: inline-block;
+  margin-left: 15px;
+}
+.footer {
+    background-color: white;
+    clear: both;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.grid {
+  display: grid;
+  grid-template-columns: 300px 300px 300px 300px;
+  grid-gap: 20px;
+}
+.grid__item {
+  background-color: lightgray;
+}
+.grid__item:last-child {
+  grid-column: 4 / 4;
+  grid-row: 1 / 1;
+}
+a {
+  color: black;
+}
+a:hover {
+  /* No underlining when hovering over a link */
+  text-decoration: none;
+}
+a:visited {
+  /* visited link */
+  color: black;
+}
+a:active {
+  /* selected link */
+  color: forestgreen;;
+}
+@keyframes color-change {
+  0% {
+    fill: #edc655;
+  }
+  50% {
+    fill: #fcffad;
+  }
+  100% {
+    fill: #f76414;
+  }
+}
+.sun {
+  animation: 4s color-change infinite alternate linear;
+}
+@keyframes cloud-move {
+  from {
+    transform: translate(0, 50px);
+  }
+  to {
+    transform: translate(200px, 50px);
+  }
+}
+.cloud-front {
+  animation: 30s cloud-move infinite alternate linear;
+}
+@keyframes cloud-move-reverse {
+  from {
+    transform: translate(446px, 48px);
+  }
+  to {
+    transform: translate(100px, 48px);
+  }
+}
+.cloud-back {
+  animation: 34s cloud-move-reverse infinite alternate linear;
+}
+@media all and (max-width: 500px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+@media all and (min-width: 500px) and (max-width: 750px){
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media all and (max-width: 750px) {
+  .grid {
+    grid-gap: 10px;
+  }
+  .grid__item:last-child {
+    grid-column: auto / auto;
+    grid-row: auto / auto;
+  }
+  h1 {
+    font-size: 22px;
+  }
+}
